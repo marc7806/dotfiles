@@ -80,6 +80,8 @@ alias master="goto master"
 # Docker ----------------------
 alias d="docker"
 alias di="docker image"
+# Compose ---------------------
+alias doc="docker-compose"
 
 # Database -------------------
 # Connect to local psql db database with postgres user
@@ -106,3 +108,6 @@ zshrc() {
 }
 
 source $ZSH/oh-my-zsh.sh
+
+# added by travis gem
+[ ! -s /Users/marc/.travis/travis.sh ] || source /Users/marc/.travis/travis.sh
