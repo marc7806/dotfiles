@@ -52,7 +52,7 @@ bindkey '^r' history-incremental-search-backward
 # User configuration
 export ZSH="$HOME/.oh-my-zsh"
 export GITPATH="$HOME/git"
-export FLUTTER="/Users/marc/Utils/flutter/bin"
+export FLUTTER=""$HOME/Utils/flutter/bin"
 
 export PATH="$GITPATH/marc7806/dotfiles/scripts:$PATH"
 
@@ -111,3 +111,5 @@ source $ZSH/oh-my-zsh.sh
 
 # added by travis gem
 [ ! -s /Users/marc/.travis/travis.sh ] || source /Users/marc/.travis/travis.sh
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
