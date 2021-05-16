@@ -9,7 +9,7 @@ export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -52,9 +52,10 @@ bindkey '^r' history-incremental-search-backward
 # User configuration
 export ZSH="$HOME/.oh-my-zsh"
 export GITPATH="$HOME/git"
-export FLUTTER=""$HOME/Utils/flutter/bin"
+export FLUTTER="$HOME/Utils/flutter/bin"
 
 export PATH="$GITPATH/marc7806/dotfiles/scripts:$PATH"
+export PATH=/Users/marc/bin:$PATH
 
 # Aliases
 # Git -------------------------
@@ -102,7 +103,7 @@ port() {
 
 # Edit zshconfig -> add it to git -> apply it
 zshrc() {
-  nano ~/.zshrc
+  vi ~/.zshrc
   cp ~/.zshrc $GITPATH/marc7806/dotfiles/zshrc
   . ~/.zshrc
 }
@@ -113,3 +114,9 @@ source $ZSH/oh-my-zsh.sh
 [ ! -s /Users/marc/.travis/travis.sh ] || source /Users/marc/.travis/travis.sh
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
+
+# starship initialization
+eval "$(starship init zsh)"
