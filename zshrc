@@ -15,7 +15,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vi ~/.zshrc"
 ### Git
 alias lg="git log --graph --pretty=format:'%C(yellow)%d%Creset %C(cyan)%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --all"
-alias gc="git clone"
+alias gc="git commit"
 alias gs="git status"
 alias gsh="git stash"
 alias gsa="git stash apply"
