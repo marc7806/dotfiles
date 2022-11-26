@@ -1,0 +1,16 @@
+require("marc7806.core.options")
+require("marc7806.core.keymaps")
+require("marc7806.core.colorschema")
+
+require("marc7806.plugins-setup")
+require("marc7806.plugins.comment")
+require("marc7806.plugins.nvim-tree")
+require("marc7806.plugins.nvim-cmp")
+require("marc7806.plugins.lualine")
+require("marc7806.plugins.telescope")
+require("marc7806.plugins.colorizer")
+
+require("marc7806.plugins.lsp.mason")
+require("marc7806.plugins.lsp.lspsaga")
+require("marc7806.plugins.lsp.lspconfig")
+require("marc7806.plugins.lsp.null-ls")
