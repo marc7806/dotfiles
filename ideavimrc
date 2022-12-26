@@ -1,0 +1,62 @@
+let mapleader = "\<SPACE>"
+
+:set relativenumber
+:set number 
+:set idearefactormode=keep
+:set ideajoin
+:set scrolloff=10
+:set showmode
+:set sneak
+:set surround
+
+:set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
+" Window navigation
+sethandler <c-h> a:vim
+sethandler <c-l> a:vim
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+nmap <Leader>\ :vsplit<CR>
+nmap <Leader>sh :vsplit<CR>
+nmap <Leader>- :split<CR>
+nmap <Leader>sv :split<CR>
+nmap <leader>fs :action FileStructurePopup<CR>
+
+" Open Terminal
+nmap <Leader>t :action ActivateTerminalToolWindow<CR>
+
+" Open recent project dialog box
+nmap <Leader><Leader>m :action ManageRecentProjects<CR>
+
+" Mapping to mimic BufferExplorer
+" nmap <Leader>be :action Switcher<CR>
+nmap <Leader>fb :action RecentFiles<CR>
+nmap <Leader>ff :action GotoFile<CR>
+nmap <Leader>fg :action SearchEverywhere<CR>
+nmap <Leader><Leader>b :action RecentFiles<CR>
+nmap <Leader>fp :action FindInPath<CR>
+nmap <Leader>hh :action FindInPath<CR>
+
+" Nerdtree want to be
+nmap <Leader>nt :NERDTreeToggle<CR>
+
+nmap <Leader>bp :action ToggleLineBreakpoint<CR>
+
+" Some Git Shortcuts for view status, pull, and branches
+" Mapping mimic Fugitive in my native vim
+nmap <Leader>gs :action CheckinProject<CR>
+nmap <Leader>gc :action CheckinProject<CR>
+nmap <Leader>ga :action Git.Add<CR>
+nmap <Leader>gp :action Git.Pull<CR>
+nmap <Leader>gn :action Annotate<CR>
+nmap <Leader>gl :action Git.Log<CR>
+nmap <Leader>go :action Github.Open.In.Browser<CR>
+nmap <Leader>br :action Git.Branches<CR>
+nmap <Leader>gb :action Git.Branches<CR>
