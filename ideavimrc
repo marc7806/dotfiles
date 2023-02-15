@@ -45,7 +45,8 @@ nmap <Leader>fp :action FindInPath<CR>
 nmap <Leader>hh :action FindInPath<CR>
 
 " Nerdtree want to be
-nmap <Leader>nt :NERDTreeToggle<CR>
+nmap <Leader>e :NERDTreeFind<CR>
+nmap <Leader>et :NERDTreeToggle<CR>
 
 nmap <Leader>bp :action ToggleLineBreakpoint<CR>
 
@@ -60,3 +61,4 @@ nmap <Leader>gl :action Git.Log<CR>
 nmap <Leader>go :action Github.Open.In.Browser<CR>
 nmap <Leader>br :action Git.Branches<CR>
 nmap <Leader>gb :action Git.Branches<CR>
+map <Leader>gb :action Git.Branches<CR>
