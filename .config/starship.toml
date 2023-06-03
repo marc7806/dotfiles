@@ -1,0 +1,47 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+[character]
+success_symbol = "[➜](bold green)"
+vimcmd_symbol = "[N](bold blue)"
+vimcmd_visual_symbol = "[V](bold yellow)"
+
+[java]
+symbol = "[ ☕ ](bold yellow)"
+style = "bold green"
+
+[git_status]
+conflicted = "⚔️ "
+diverged = "⇡×${ahead_count} ⇣×${behind_count}"
+modified = "${count}! "
+renamed = "${count}» "
+deleted = "${count}✘ "
+staged = ""
+untracked = ""
+stashed = ""
+style = "bold red"
+format = '([$ahead_behind\[ $all_status\]]($style) )'
+
+[hostname]
+ssh_only = false
+format = "<[$hostname]($style)>"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = true
+
+[time]
+time_format = "%T"
+format = "$time($style) "
+style = "bright-white"
+disabled = false
+
+[username]
+style_user = "bold dimmed blue"
+show_always = false
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "bright-blue"
+truncate_to_repo = false
+truncation_length = 5
+truncation_symbol="…/"
