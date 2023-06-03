@@ -9,33 +9,58 @@ if [ "$#" -ne 1 ] || [ "$1" != "zsh" ] || "$1" != "fish" ]; then
     echo "Example: ./install.sh zsh"
 fi
 
-function setup_config_structure () {
-  echo "Configure folder structure..."  
+function sync_folder () {
+  mkdir -p "$2"
+  ln -snf $(pwd)/"$1" "$2"
+}
 
+function sync_file () {
+  ln -sf $(pwd)/"$1" "$2"
 }
 
 function install_base_plugins () {
   echo "Install base plugins..."
   brew update
   brew upgrade
-  echo "- Install starship"
-  brew install starship
   echo "- Install autojump"
   brew install autojump
   echo "- Install exa"
   brew install exa
-  echo "- Install neovim"
-  brew install neovim
 }
+
+function configure_git () {
+  echo "Configure git..."
+  sync_file .files/.gitconfig ~/.gitconfig
+  sync_folder .config/git ~/.config/git
+}
+
+function install_starship () {
+  echo "Install and configure starship..."
+  brew install starship
+  sync_file .config/starship.toml ~/.config/starship.toml
+}
+
+install_base_plugins
+configure_git
 
 if [ "$1" == "zsh" ];then
   echo "Configure zsh..."
-
+  sync_folder .config/zsh ~/.config/zsh
+  sync_file .files/.zshrc ~/.zshrc
+  source ~/.zshrc
 fi
 
 if [ "$1" == "fish" ];then
   echo "Install fish..."
   brew install fish
   echo "Configure fish..."
-
+  sync_folder .config/fish ~/.config/fish
+  source ~/.config/fish/config.fish
 fi
+
+function configure_vim () {
+  echo "Install neovim"
+  brew install neovim
+  echo "Configure vim settings"
+  sync_folder .config/nvim ~/.config/nvim
+}

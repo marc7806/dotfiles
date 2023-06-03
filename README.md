@@ -5,6 +5,15 @@ The setup guide is designed for **macOS** users.
 
 ## Shell Setup
 
+### Installation
+
+Run `./macos-install.sh <fish|zsh>` for macOS installation.
+This requires `brew` as package manager.
+The install script creates symlinks for the configuration files.
+
+If you want to have specific local settings, then
+add them in the specific files under `./local/` folder.
+
 ### Core plugins
 
 The shell setup uses some core plugins that first need to
@@ -17,20 +26,6 @@ be installed in order to have a working configuration:
   - `brew install autojump`
 - [exa](https://the.exa.website/)
   - `brew install exa`
-
-### zsh
-
-### fish
-
-1. Install fish
-
-```bash
-brew install fish
-```
-
-2. Copy `.config/fish` folder to your home config folder
-3. Make sure the `SHELL_CONF_DIR` variable inside `config.fish`
-   is correctly set to the dofiles folder path
 
 ---
 
