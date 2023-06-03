@@ -40,7 +40,17 @@ function install_starship () {
   sync_file .config/starship.toml ~/.config/starship.toml
 }
 
+function configure_vim () {
+  echo "Install neovim"
+  brew install neovim
+  echo "Configure vim settings"
+  sync_folder .config/nvim ~/.config/nvim
+  sync_file .files/.vimrc ~/.vimrc
+  sync_file .files/.ideavimrc ~/.ideavimrc
+}
+
 install_base_plugins
+configure_vim
 configure_git
 
 if [ "$1" == "zsh" ];then
@@ -57,10 +67,3 @@ if [ "$1" == "fish" ];then
   sync_folder .config/fish ~/.config/fish
   source ~/.config/fish/config.fish
 fi
-
-function configure_vim () {
-  echo "Install neovim"
-  brew install neovim
-  echo "Configure vim settings"
-  sync_folder .config/nvim ~/.config/nvim
-}

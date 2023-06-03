@@ -4,7 +4,7 @@ set -gx TERM xterm-256color
 set SHELL_CONF_DIR $HOME/git/dotfiles
 set SHELL_FUNCTIONS_DIR $SHELL_CONF_DIR/functions
 set SHELL_ALIASES $SHELL_CONF_DIR/aliases.sh
-set LOCAL_CONFIG $HOME/.config/fish/config-local.fish
+set LOCAL_CONFIG $SHELL_CONF_DIR/local/fish.local
 
 # see: https://fishshell.com/docs/current/interactive.html
 set fish_cursor_default block blink
