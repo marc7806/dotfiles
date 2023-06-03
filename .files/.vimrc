@@ -2,7 +2,7 @@
 syntax on
 
 " Show line number
-set number
+set number relativenumber
 
 " Show file stats
 set ruler

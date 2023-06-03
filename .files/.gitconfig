@@ -1,12 +1,10 @@
 [user]
 	name = Marc
 	email = marc7806@gmx.de
-[core]
-	excludesfile = /Users/marc/.gitignore
 [alias]
     lg = log --graph --pretty=format:'%C(yellow)%d%Creset %C(cyan)%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --all
     undo = reset HEAD~1 --mixed
-    wip = !git add -A && git commit -m 'WIP'
+    wip = !git add -A && git commit -m '🚧 WIP'
     res = !git reset --hard
     br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
     feature = git checkout -b "feature/\"$1^\"" 
