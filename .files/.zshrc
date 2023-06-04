@@ -1,10 +1,10 @@
 export ZVM_INIT_MODE=sourcing
 export TERM="xterm-256color"
 
-export SHELL_CONF_DIR $HOME/git/dotfiles
-export SHELL_FUNCTIONS_DIR $SHELL_CONF_DIR/functions
-export SHELL_ALIASES $SHELL_CONF_DIR/aliases.sh
-export LOCAL_CONFIG $HOME/.config/zsh/config-local.sh
+export SHELL_CONF_DIR = $HOME/git/dotfiles
+export SHELL_FUNCTIONS_DIR = $SHELL_CONF_DIR/functions
+export SHELL_ALIASES = $SHELL_CONF_DIR/aliases.sh
+export LOCAL_CONFIG = $SHELL_CONF_DIR/local/zsh.local
 
 # **** zsh configs (zinit, fzf ...) **** #
 for conf in $SHELL_CONF_DIR/.config/zsh/*; do 
