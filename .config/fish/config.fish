@@ -3,7 +3,7 @@ set -gx TERM xterm-256color
 
 set SHELL_CONF_DIR $HOME/git/dotfiles
 set SHELL_FUNCTIONS_DIR $SHELL_CONF_DIR/functions
-set SHELL_ALIASES $SHELL_CONF_DIR/aliases.sh
+set SHELL_ALIASES $SHELL_CONF_DIR/aliases/aliases.sh
 set LOCAL_CONFIG $SHELL_CONF_DIR/local/fish.local
 
 # see: https://fishshell.com/docs/current/interactive.html

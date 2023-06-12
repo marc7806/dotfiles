@@ -3,7 +3,7 @@ export TERM="xterm-256color"
 
 export SHELL_CONF_DIR = $HOME/git/dotfiles
 export SHELL_FUNCTIONS_DIR = $SHELL_CONF_DIR/functions
-export SHELL_ALIASES = $SHELL_CONF_DIR/aliases.sh
+export SHELL_ALIASES = $SHELL_CONF_DIR/aliases/aliases.sh
 export LOCAL_CONFIG = $SHELL_CONF_DIR/local/zsh.local
 
 # **** zsh configs (zinit, fzf ...) **** #
