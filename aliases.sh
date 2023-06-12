@@ -23,7 +23,7 @@ alias gsp="git stash pop"
 alias ga="git add"
 alias master="git checkout master"
 alias main="git checkout main"
-alias gb="git branch -vv"
+alias gb="git branch -vv -a"
 
 # Docker 
 alias d="docker"
