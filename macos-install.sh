@@ -9,13 +9,20 @@ if [ "$#" -ne 1 ] || [ "$1" != "zsh" ] || "$1" != "fish" ]; then
     echo "Example: ./install.sh zsh"
 fi
 
+# Creates a folder symlink and overrides if already exists
 function sync_folder () {
   mkdir -p "$2"
   ln -snf $(pwd)/"$1" "$2"
 }
 
+# Creates a file symlink and overrides if already exists
 function sync_file () {
   ln -sf $(pwd)/"$1" "$2"
+}
+
+# Copies a file to a target without overriding
+function copy_file () {
+  cp -n $(pwd)/"$1" "$2"
 }
 
 function install_base_plugins () {
@@ -30,7 +37,8 @@ function install_base_plugins () {
 
 function configure_git () {
   echo "Configure git..."
-  sync_file .files/.gitconfig ~/.gitconfig
+  # do not override gitconfig if already present
+  copy_file .files/.gitconfig ~/.gitconfig
   sync_folder .config/git ~/.config/git
 }
 
