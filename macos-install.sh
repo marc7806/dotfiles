@@ -57,7 +57,6 @@ if [ "$1" == "zsh" ];then
   echo "Configure zsh..."
   sync_folder .config/zsh ~/.config/zsh
   sync_file .files/.zshrc ~/.zshrc
-  source ~/.zshrc
 fi
 
 if [ "$1" == "fish" ];then
@@ -65,5 +64,4 @@ if [ "$1" == "fish" ];then
   brew install fish
   echo "Configure fish..."
   sync_folder .config/fish ~/.config/fish
-  source ~/.config/fish/config.fish
 fi
