@@ -49,10 +49,13 @@ function configure_vim () {
   sync_file .files/.ideavimrc ~/.ideavimrc
 }
 
+# setup base tools
 install_base_plugins
 configure_vim
 configure_git
+install_starship
 
+# setup shell 
 if [ "$1" == "zsh" ];then
   echo "Configure zsh..."
   sync_folder .config/zsh ~/.config/zsh
