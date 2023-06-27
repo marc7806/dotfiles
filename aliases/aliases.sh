@@ -23,6 +23,7 @@ alias gsp="git stash pop"
 alias ga="git add"
 alias master="git checkout master"
 alias main="git checkout main"
+alias gch="git checkout $1"
 alias gb="git branch -vv -a"
 alias gbclear="git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
 
