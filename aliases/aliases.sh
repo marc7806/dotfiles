@@ -24,6 +24,7 @@ alias ga="git add"
 alias master="git checkout master"
 alias main="git checkout main"
 alias gb="git branch -vv -a"
+alias gbclear="git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
 
 # Docker 
 alias d="docker"
