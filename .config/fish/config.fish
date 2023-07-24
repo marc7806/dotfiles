@@ -27,8 +27,8 @@ end
 # **** Bindings **** #
 # see list of available commands: 
 # https://fishshell.com/docs/current/cmds/bind.html
+fish_vi_key_bindings
 bind -M default \_ beginning-of-line
-bind -M insert \ci complete-and-search
 bind -M insert \cr history-pager
 bind -M default \cr history-pager
 bind -M insert \cb prevd-or-backward-word repaint
