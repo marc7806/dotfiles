@@ -35,6 +35,9 @@ nmap <Leader>t :action ActivateTerminalToolWindow<CR>
 " Open recent project dialog box
 nmap <Leader><Leader>m :action ManageRecentProjects<CR>
 
+" Trigger AceJump
+nmap f :action AceAction<CR>
+
 " Mapping to mimic BufferExplorer
 " nmap <Leader>be :action Switcher<CR>
 nmap <Leader>fb :action RecentFiles<CR>
