@@ -33,7 +33,7 @@ nmap <leader>fs :action FileStructurePopup<CR>
 nmap <Leader>t :action ActivateTerminalToolWindow<CR>
 
 " Open recent project dialog box
-nmap <Leader><Leader>m :action ManageRecentProjects<CR>
+nmap <Leader>m :action ManageRecentProjects<CR>
 
 " Trigger AceJump
 nmap f :action AceAction<CR>
@@ -62,6 +62,4 @@ nmap <Leader>gp :action Git.Pull<CR>
 nmap <Leader>gn :action Annotate<CR>
 nmap <Leader>gl :action Git.Log<CR>
 nmap <Leader>go :action Github.Open.In.Browser<CR>
-nmap <Leader>br :action Git.Branches<CR>
 nmap <Leader>gb :action Git.Branches<CR>
-map <Leader>gb :action Git.Branches<CR>
