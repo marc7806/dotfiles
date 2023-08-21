@@ -36,7 +36,7 @@ nmap <Leader>t :action ActivateTerminalToolWindow<CR>
 nmap <Leader>m :action ManageRecentProjects<CR>
 
 " Trigger AceJump
-nmap f :action AceAction<CR>
+nmap <Leader>f :action AceAction<CR>
 
 " Mapping to mimic BufferExplorer
 " nmap <Leader>be :action Switcher<CR>
@@ -55,7 +55,7 @@ nmap <Leader>bp :action ToggleLineBreakpoint<CR>
 
 " Some Git Shortcuts for view status, pull, and branches
 " Mapping mimic Fugitive in my native vim
-nmap <Leader>gs :action CheckinProject<CR>
+nmap <Leader>gs :action ActivateCommitToolWindow<CR>
 nmap <Leader>gc :action CheckinProject<CR>
 nmap <Leader>ga :action Git.Add<CR>
 nmap <Leader>gp :action Git.Pull<CR>
