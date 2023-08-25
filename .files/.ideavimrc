@@ -32,29 +32,35 @@ nmap <leader>fs :action FileStructurePopup<CR>
 " Open Terminal
 nmap <Leader>t :action ActivateTerminalToolWindow<CR>
 
+" Open services
+:map <Leader>s :action ActivateServicesToolWindow<CR>
+
 " Open recent project dialog box
 nmap <Leader>m :action ManageRecentProjects<CR>
 
-" Trigger AceJump
-nmap <Leader>f :action AceAction<CR>
+" Code execution
+nmap <Leader>bp :action ToggleLineBreakpoint<CR>
+nmap <Leader>d :action Debug<CR>
+nmap <Leader>ds :action Stop<CR>
 
-" Mapping to mimic BufferExplorer
-" nmap <Leader>be :action Switcher<CR>
+" Code navigation
+nmap <Leader>be :action Switcher<CR>
 nmap <Leader>fb :action RecentFiles<CR>
 nmap <Leader>ff :action GotoFile<CR>
 nmap <Leader>fg :action SearchEverywhere<CR>
-nmap <Leader><Leader>b :action RecentFiles<CR>
 nmap <Leader>fp :action FindInPath<CR>
-nmap <Leader>hh :action FindInPath<CR>
+:map <Leader>cd :action GotoDeclaration<CR>
+:map <s-h> :action Back<CR>
+:map <s-l> :action Forward<CR>
 
-" Nerdtree want to be
+" Nerdtree
 nmap <Leader>e :NERDTreeFind<CR>
 nmap <Leader>et :NERDTreeToggle<CR>
 
-nmap <Leader>bp :action ToggleLineBreakpoint<CR>
+" AceJump
+nmap <Leader>f :action AceAction<CR>
 
-" Some Git Shortcuts for view status, pull, and branches
-" Mapping mimic Fugitive in my native vim
+" Git
 nmap <Leader>gs :action ActivateCommitToolWindow<CR>
 nmap <Leader>gc :action CheckinProject<CR>
 nmap <Leader>ga :action Git.Add<CR>
