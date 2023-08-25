@@ -23,49 +23,49 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 
-nmap <Leader>\ :vsplit<CR>
-nmap <Leader>sh :vsplit<CR>
-nmap <Leader>- :split<CR>
-nmap <Leader>sv :split<CR>
-nmap <leader>fs :action FileStructurePopup<CR>
+:map <leader>\ :vsplit<CR>
+:map <leader>sh :vsplit<CR>
+:map <leader>- :split<CR>
+:map <leader>sv :split<CR>
+:map <leader>fs <Action>(FileStructurePopup)
 
 " Open Terminal
-nmap <Leader>t :action ActivateTerminalToolWindow<CR>
+:map <leader>t <Action>(ActivateTerminalToolWindow)
 
 " Open services
-:map <Leader>s :action ActivateServicesToolWindow<CR>
+:map <leader>s <Action>(ActivateServicesToolWindow)
 
 " Open recent project dialog box
-nmap <Leader>m :action ManageRecentProjects<CR>
+:map <leader>m <Action>(ManageRecentProjects)
 
 " Code execution
-nmap <Leader>bp :action ToggleLineBreakpoint<CR>
-nmap <Leader>d :action Debug<CR>
-nmap <Leader>ds :action Stop<CR>
+:map <leader>bp <Action>(ToggleLineBreakpoint)
+:map <leader>d <Action>(Debug)
+:map <leader>ds <Action>(Stop)
 
 " Code navigation
-nmap <Leader>be :action Switcher<CR>
-nmap <Leader>fb :action RecentFiles<CR>
-nmap <Leader>ff :action GotoFile<CR>
-nmap <Leader>fg :action SearchEverywhere<CR>
-nmap <Leader>fp :action FindInPath<CR>
-:map <Leader>cd :action GotoDeclaration<CR>
-:map <s-h> :action Back<CR>
-:map <s-l> :action Forward<CR>
+:map <leader>be <Action>(Switcher)
+:map <leader>fb <Action>(RecentFiles)
+:map <leader>ff <Action>(GotoFile)
+:map <leader>fg <Action>(SearchEverywhere)
+:map <leader>fp <Action>(FindInPath)
+:map <leader>cd <Action>(GotoDeclaration)
+:map <s-h> <Action>(Back)
+:map <s-l> <Action>(Forward)
 
 " Nerdtree
-nmap <Leader>e :NERDTreeFind<CR>
-nmap <Leader>et :NERDTreeToggle<CR>
+:map <leader>e :NERDTreeFind<CR>
+:map <leader>et :NERDTreeToggle<CR>
 
 " AceJump
-nmap <Leader>f :action AceAction<CR>
+:map <leader>f <Action>(AceAction)
 
 " Git
-nmap <Leader>gs :action ActivateCommitToolWindow<CR>
-nmap <Leader>gc :action CheckinProject<CR>
-nmap <Leader>ga :action Git.Add<CR>
-nmap <Leader>gp :action Git.Pull<CR>
-nmap <Leader>gn :action Annotate<CR>
-nmap <Leader>gl :action Git.Log<CR>
-nmap <Leader>go :action Github.Open.In.Browser<CR>
-nmap <Leader>gb :action Git.Branches<CR>
+:map <leader>gs <Action>(ActivateCommitToolWindow)
+:map <leader>gc <Action>(CheckinProject)
+:map <leader>ga <Action>(Git.Add)
+:map <leader>gp <Action>(Git.Pull)
+:map <leader>gn <Action>(Annotate)
+:map <leader>gl <Action>(Git.Log)
+:map <leader>go <Action>(Github.Open.In.Browser)
+:map <leader>gb <Action>(Git.Branches)
