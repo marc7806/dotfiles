@@ -52,6 +52,9 @@ nnoremap <c-k> <c-w>k
 :map <leader>cd <Action>(GotoDeclaration)
 :map <s-h> <Action>(Back)
 :map <s-l> <Action>(Forward)
+" camelCase navigation
+:map n [w
+:map <S-n> [b
 
 " Nerdtree
 :map <leader>e :NERDTreeFind<CR>
