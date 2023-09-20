@@ -55,6 +55,8 @@ nnoremap <c-k> <c-w>k
 " camelCase navigation
 :map n [w
 :map <S-n> [b
+" code block folding
+:map <leader>j <Action>(CollapseSelection)
 
 " Nerdtree
 :map <leader>e :NERDTreeFind<CR>
