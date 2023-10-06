@@ -1,5 +1,5 @@
 [user]
-	name = Marc
+	name = marc7806
 	email = marc7806@gmx.de
 [alias]
     lg = log --graph --pretty=format:'%C(yellow)%d%Creset %C(cyan)%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --all
