@@ -50,6 +50,7 @@ nnoremap <c-k> <c-w>k
 :map <leader>fg <Action>(SearchEverywhere)
 :map <leader>fp <Action>(FindInPath)
 :map <leader>cd <Action>(GotoDeclaration)
+:map <leader>ai <Action>(AIIntentionsActionGroup)
 :map <s-h> <Action>(Back)
 :map <s-l> <Action>(Forward)
 " camelCase navigation
