@@ -5,6 +5,7 @@
     lg = log --graph --pretty=format:'%C(yellow)%d%Creset %C(cyan)%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --all
     undo = reset HEAD~1 --mixed
     wip = !git add -A && git commit -m '🚧 WIP'
+    unwip = "!git log -n 1 --pretty=%B | grep -q '🚧 WIP' && git reset HEAD~1 || echo 'No WIP commit found'"
     res = !git reset --hard
     br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
     feature = git checkout -b "feature/\"$1^\"" 
